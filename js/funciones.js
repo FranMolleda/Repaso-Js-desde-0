@@ -45,6 +45,9 @@ let viajando = function (destino) {
 
 //Arrow function
 
+//Sustituimos la palabra "function" por "=>" y la llevamos al otro lado del parantesis
+//Quitamos el return y las llaves (siempre y cuando solo retornes una sóla línea)
+
 let viajando1 = (destino) => `Viajando a la ciudad de: ${destino}`;
 
 let viaje;
