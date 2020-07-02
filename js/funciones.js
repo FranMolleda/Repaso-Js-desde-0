@@ -37,3 +37,23 @@ actividad();
 actividad1("Juan");
 
 //Arrow functions
+
+//Hasta ahora conocido
+let viajando = function (destino) {
+  return `Viajando a la ciudad de: ${destino}`;
+};
+
+//Arrow function
+
+//Sustituimos la palabra "function" por "=>" y la llevamos al otro lado del parantesis
+//Quitamos el return y las llaves (siempre y cuando solo retornes una sóla línea)
+
+let viajando1 = (destino) => `Viajando a la ciudad de: ${destino}`;
+
+let viaje;
+let viaje1;
+viaje = viajando("París");
+viaje1 = viajando1("Madrid");
+
+console.log(viaje);
+console.log(viaje1);
