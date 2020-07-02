@@ -14,3 +14,26 @@ const cliente = function (nombreCliente) {
 };
 
 cliente("Fran");
+
+//Funciones con parametros
+
+//Funciones con parametros por defecto
+
+//Declarativa
+function actividad(nombre = "Fran", actividad = "deporte") {
+  console.log(
+    `La persona ${nombre}, está realizando la actividad de ${actividad}`
+  );
+}
+
+//Expresion
+const actividad1 = function (nombre = "Fran", actividad = "deporte") {
+  console.log(
+    `La persona ${nombre}, está realizando la actividad de ${actividad}`
+  );
+};
+actividad("Fran", "aprender JavaScript");
+actividad();
+actividad1("Juan");
+
+//Arrow functions
