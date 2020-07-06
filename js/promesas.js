@@ -49,7 +49,30 @@ const descargarUsuarios = (cantidad) =>
     xhr.send();
   });
 
+//Por consola
+// descargarUsuarios(10).then(
+//   (miembros) => console.log(miembros),
+//   (error) => console.error(new Error("Hubo un error" + error))
+// );
+
+//Imprimimos por pantalla
 descargarUsuarios(10).then(
-  (miembros) => console.log(miembros),
+  (miembros) => imprimirHTML(miembros),
   (error) => console.error(new Error("Hubo un error" + error))
 );
+
+function imprimirHTML(usuarios) {
+  let html = "";
+  usuarios.map((element) => {
+    html += `
+            <li>
+                Nombre: ${element.name.first}
+                País: ${element.nat}
+                Imagen: <img src="${element.picture.medium}"
+            </li>`;
+  });
+  console.log(usuarios);
+
+  const contenedorApp = document.querySelector("#app");
+  contenedorApp.innerHTML = html;
+}
