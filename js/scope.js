@@ -11,7 +11,8 @@ if (musica) {
 
 console.log(`fuera del if ${musica} con variable var`);
 
-//Scope let
+//Scope let y const
+
 
 let musica1 = "Rock";
 
